@@ -54,6 +54,9 @@ extern audio_output audio_pipe;
 #ifdef CONFIG_STDOUT
 extern audio_output audio_stdout;
 #endif
+#ifdef CONFIG_VBUS
+extern audio_output audio_vbus;
+#endif
 
 static audio_output *outputs[] = {
 #ifdef CONFIG_ALSA
@@ -76,6 +79,9 @@ static audio_output *outputs[] = {
 #endif
 #ifdef CONFIG_STDOUT
     &audio_stdout,
+#endif
+#ifdef CONFIG_VBUS
+    &audio_vbus,
 #endif
 #ifdef CONFIG_DUMMY
     &audio_dummy,

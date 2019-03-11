@@ -1171,6 +1171,9 @@ char *get_version_string() {
 #ifdef CONFIG_STDOUT
     strcat(version_string, "-stdout");
 #endif
+#ifdef CONFIG_VBUS
+    strcat(version_string, "-vbus");
+#endif
 #ifdef CONFIG_PIPE
     strcat(version_string, "-pipe");
 #endif

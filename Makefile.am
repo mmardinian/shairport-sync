@@ -48,6 +48,7 @@ endif
 
 if USE_VBUS
 shairport_sync_SOURCES += audio_vbus.c
+AM_LDFLAGS = -ljansson -lnats
 endif
 
 if USE_PIPE

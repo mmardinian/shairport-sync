@@ -74,7 +74,12 @@ AM_CONDITIONAL([USE_DUMMY], [test "x$with_dummy" = "xyes" ])
 
 AC_ARG_WITH([stdout],[  --with-stdout = include the stdout audio back end ],[ AC_MSG_RESULT(>>Including the stdout audio back end)  AC_DEFINE([CONFIG_STDOUT], 1, [Needed by the compiler.]) ], )
 
+AC_ARG_WITH([vbus],[  --with-vbus = include the vbus audio back end ],[ AC_MSG_RESULT(>>Including the vbus audio back end)  AC_DEFINE([CONFIG_VBUS], 1, [Needed by the compiler.]) ], )
+
+
 AM_CONDITIONAL([USE_STDOUT], [test "x$with_stdout" = "xyes" ])
+
+AM_CONDITIONAL([USE_VBUS], [test "x$with_vbus" = "xyes" ])
 
 AC_ARG_WITH([pipe],[  --with-pipe = include the pipe audio back end ],[ AC_MSG_RESULT(>>Including the pipe audio back end)  AC_DEFINE([CONFIG_PIPE], 1, [Needed by the compiler.]) ], )
 AM_CONDITIONAL([USE_PIPE], [test "x$with_pipe" = "xyes" ])

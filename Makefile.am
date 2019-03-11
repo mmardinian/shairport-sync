@@ -46,6 +46,10 @@ if USE_STDOUT
 shairport_sync_SOURCES += audio_stdout.c
 endif
 
+if USE_STDOUT
+shairport_sync_SOURCES += audio_vbus.c
+endif
+
 if USE_PIPE
 shairport_sync_SOURCES += audio_pipe.c
 endif
